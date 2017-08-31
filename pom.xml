@@ -6,7 +6,28 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+	<properties>
+		<spring.version>4.3.10.RELEASE</spring.version>
+		<!-- <spring.version>4.3.9.RELEASE</spring.version> -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<org.apache.myfaces.version>2.1.5</org.apache.myfaces.version>
+
+	</properties>
+
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sopra.resa</groupId>
+			<artifactId>resaSpringEquipe2</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -22,12 +43,29 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.myfaces.core</groupId>
+			<artifactId>myfaces-api</artifactId>
+			<version>${org.apache.myfaces.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.myfaces.core</groupId>
+			<artifactId>myfaces-impl</artifactId>
+			<version>${org.apache.myfaces.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-
-		<finalName>airways</finalName>
-
+		<finalName>airways</finalName><!-- .war ajoute automatiquement -->
 		<plugins>
 
 			<plugin>
@@ -40,10 +78,10 @@
 				</configuration>
 			</plugin>
 
-
 		</plugins>
-
 	</build>
+
+
 
 </project>
 
