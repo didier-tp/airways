@@ -5,8 +5,10 @@ package com.sopra.web.mbean;
 
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import com.sopra.resa.model.Client;
 import com.sopra.resa.service.ServiceClient;
@@ -15,8 +17,10 @@ import com.sopra.resa.service.ServiceClient;
  * @author ajc
  *
  */
-@ManagedBean
+// @ManagedBean
+@Component
 // @SessionScoped
+@Scope("request")
 public class LoginBean {
 	private String username;
 

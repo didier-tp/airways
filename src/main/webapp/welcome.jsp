@@ -14,7 +14,6 @@
 %>
 <body>
 	<a href="xhtml/login.jsf">Login</a>
-
 	<a href="param_resa.jsp"><%=resa%></a>
 </body>
 </html>
